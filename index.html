@@ -8,41 +8,81 @@
 
   <!-- Tambahkan ini -->
   <style>
-    body {
-  background: linear-gradient(135deg, #4a00e0, #8e2de2);
-  color: white;
-  font-family: 'Poppins', sans-serif;
+  body {
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
   }
 
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 24px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(142, 45, 226, 0.3);
-    }
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+  }
 
-    .hero-bg h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #ffffff;
-      text-shadow: 2px 2px #00000070;
-    }
+  .card:hover {
+    transform: scale(1.02);
+  }
 
-    @keyframes marquee {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
+  .hero-bg h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
 
-    .animate-marquee {
-      display: inline-block;
-      animation: marquee 12s linear infinite;
-    }
-  </style>
+  .btn-primary {
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 9999px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 110, 196, 0.6);
+  }
+
+  input, select {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 12px 16px;
+    border-radius: 12px;
+    color: white;
+    width: 100%;
+    margin-bottom: 16px;
+    outline: none;
+    font-family: inherit;
+  }
+
+  input:focus, select:focus {
+    border-color: #ff6ec4;
+    box-shadow: 0 0 8px #ff6ec4;
+  }
+
+  @keyframes marquee {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .animate-marquee {
+    display: inline-block;
+    animation: marquee 12s linear infinite;
+    white-space: nowrap;
+  }
+</style>
 </head>
 <body>
   <div class="overflow-hidden whitespace-nowrap bg-purple-700 text-white py-2">
