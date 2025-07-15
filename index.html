@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>ZAMS SERVICE</title>
+
+  <!-- Tambahkan ini -->
+  <style>
+    body {
+    background: linear-gradient(135deg, #6a0dad, #922cec);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    }
+
+   @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+    }
+
+    .hero-bg h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .animate-marquee {
+      display: inline-block;
+      animation: marquee 12s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="overflow-hidden whitespace-nowrap bg-purple-700 text-white py-2">
+    <div class="animate-marquee inline-block text-lg font-bold">
+      Welcome to Zams Service &nbsp; 👋&nbsp; Welcome to Zams Service &nbsp; 👋&nbsp; Welcome to Zams Service
+    </div>
+  </div>
+  <header class="text-center p-6">
+    <h1 class="text-4xl font-bold text-purple-400">ZAMS SERVICE STORE</h1>
+    <p class="text-gray-300">Server & VPS Ready for You</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Product Card -->
+    <div class="bg-black/60 p-4 rounded-2xl shadow-lg border border-purple-700">
+      <h2 class="text-xl font-bold">Server Ready Up</h2>
+      <p class="text-pink-300">Rp 85.000</p>
+      <a href="https://discord.com/users/1083755433925296230" target="_blank" class="mt-2 inline-block bg-purple-700 hover:bg-purple-600 px-4 py-2 rounded-xl">Beli via Discord</a>
+    </div>
+
+    <!-- VPS Packages -->
+    <div class="bg-black/60 p-4 rounded-2xl shadow-lg border border-purple-700">
+      <h2 class="text-xl font-bold">VPS by Digital Ocean</h2>
+      <ul class="text-sm text-gray-300 space-y-1">
+  <li>
+    4GB / 2vCPU — Rp 25.000
+    <span style="background-color: #7e22ce; padding: 2px 6px; border-radius: 6px; font-size: 0.75rem;">Zams Service</span>
+  </li>
+  <li>
+    8GB / 4vCPU — Rp 30.000
+    <span style="background-color: #7e22ce; padding: 2px 6px; border-radius: 6px; font-size: 0.75rem;">Zams Service</span>
+  </li>
+  <li>
+    16GB / 4vCPU — Rp 35.000
+    <span style="background-color: #7e22ce; padding: 2px 6px; border-radius: 6px; font-size: 0.75rem;">Zams Service</span>
+  </li>
+      </ul>
+      <a href="https://discord.com/users/1083755433925296230" target="_blank" class="mt-2 inline-block bg-purple-700 hover:bg-purple-600 px-4 py-2 rounded-xl">Beli via Discord</a>
+    </div>
+  </main>
+
+  <!-- Checkout Form -->
+<section class="max-w-xl mx-auto mt-12 p-6 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 rounded-2xl shadow-xl border border-purple-400">
+<section class="max-w-xl mx-auto mt-12 p-6 bg-gradient-to-br from-purple-900/80 via-purple-800/70 to-purple-700/60 rounded-3xl shadow-2xl border border-purple-500 backdrop-blur-md">
+  <h3 class="text-4xl font-extrabold text-pink-400 mb-8 text-center drop-shadow-md">🛒 Checkout Form</h3>
+  
+  <form action="https://formspree.io/f/mwkgrzwp" method="POST" class="space-y-6">
+    
+    <input
+      type="text"
+      name="nama"
+      placeholder="Nama Kamu"
+      class="w-full px-5 py-3 rounded-xl bg-black/70 border border-pink-400 text-white placeholder-gray-300 focus:ring-4 focus:ring-pink-500/50 outline-none transition-all duration-300 shadow-inner hover:shadow-pink-500/20"
+      required
+    />
+    
+    <input
+      type="text"
+      name="produk"
+      placeholder="Nama Produk (misal: VPS 8GB)"
+      class="w-full px-5 py-3 rounded-xl bg-black/70 border border-pink-400 text-white placeholder-gray-300 focus:ring-4 focus:ring-pink-500/50 outline-none transition-all duration-300 shadow-inner hover:shadow-pink-500/20"
+      required
+    />
+    
+    <input
+      type="text"
+      name="username_gt"
+      placeholder="Username Discord & GT"
+      class="w-full px-5 py-3 rounded-xl bg-black/70 border border-pink-400 text-white placeholder-gray-300 focus:ring-4 focus:ring-pink-500/50 outline-none transition-all duration-300 shadow-inner hover:shadow-pink-500/20"
+      required
+    />
+    
+    <select
+      name="pembayaran"
+      class="w-full px-5 py-3 rounded-xl bg-black/70 border border-pink-400 text-white placeholder-gray-300 focus:ring-4 focus:ring-pink-500/50 outline-none transition-all duration-300 shadow-inner hover:shadow-pink-500/20"
+      required
+    >
+      <option value="" disabled selected>Pilih Metode Pembayaran</option>
+      <option value="DANA">DANA - 081210665020</option>
+      <option value="GOPAY">GOPAY - 081210665020</option>
+    </select>
+    
+    <button
+      type="submit"
+      class="w-full bg-pink-500 hover:bg-pink-600 px-5 py-3 rounded-xl text-white font-semibold shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-pink-500/30"
+    >
+       Kirim Bukti Pesanan
+    </button>
+  </form>
+</section>
+
+  <footer class="text-center text-sm text-gray-400 mt-10 p-4">
+    &copy; 2025 Zams Service. All rights reserved.
+  </footer>
+</body>
+</html>
